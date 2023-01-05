@@ -19,6 +19,11 @@ Initializing Project Folder
 	# This is where git stores all the project information
 git init
 ```
+
+Each Git branch is like an alternate reality
+- Head is the actual reality
+- Main (Master)
+
 ## Git Environments
 - Working (*last commit status*)
 - Staging (*add command - changes queued prior to commit*)
@@ -36,6 +41,7 @@ Committing Files to History
 ```# creates a version checkpoint 
 git commit -m ‘Your comment’
 ```
+*A Git hash is unique identifier for a commit.*
 
 Getting File State
 ```
