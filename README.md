@@ -70,3 +70,17 @@ Creating global ignore file with a `config` variable that captures ignore settin
 ```
 git config --global core.excludesfile [file]
 ```
+
+Deleting, Renaming, and Moving Files
+```
+# deleting files managed by git
+    # also moves deletion event into staging
+    # take care of git add 
+git rm filename
+
+# renaming files
+git mv oldfilename newfilename
+
+# moving files 
+
+```
