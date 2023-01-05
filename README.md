@@ -54,3 +54,19 @@ git restore --state (staged) filename
 git restore . # restores current directory
 git checkout . # older version of restore command
 ```
+
+Ignoring Files
+>Files that are not tracked by git or uploaded to GitHub. Create a `.gitignore` file at the root level of project folder with files or file patterns you want to ignore.
+```
+.DS_Store
+.vscode/authentication.js
+node_modules
+notes/ 
+**/*-todo.md
+```
+*Git doesn't track empty folders*
+
+Creating global ignore file with a `config` variable that captures ignore settings for any new project
+```
+git config --global core.excludesfile [file]
+```
