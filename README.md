@@ -108,3 +108,12 @@ q
 ```
 It is difficult to view when there are a lot of changes. In that case better to use VS Code's ***Source Control*** feature.
 
+## Changing History
+Amending is when you 
+```
+git commit amend
+git commit -am 'New commit msg'
+git commit amend --no-edit
+```
+
+Test text
