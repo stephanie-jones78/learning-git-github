@@ -57,8 +57,8 @@ git restore . # restores current directory
 git checkout . # older version of restore command
 ```
 
-Ignoring Files
->Files that are not tracked by git or uploaded to GitHub. Create a `.gitignore` file at the root level of project folder with files or file patterns you want to ignore.
+## Ignoring Files
+Files that are not tracked by git or uploaded to GitHub. Create a `.gitignore` file at the root level of project folder with files or file patterns you want to ignore.
 ```
 .DS_Store
 .vscode/authentication.js
@@ -73,7 +73,7 @@ Creating global ignore file with a `config` variable that captures ignore settin
 git config --global core.excludesfile [file]
 ```
 
-Deleting, Renaming, and Moving Files
+## Deleting, Renaming, and Moving Files
 ```
 # deleting files managed by git
     # also moves deletion event into staging
@@ -84,5 +84,16 @@ git rm filename
 git mv oldfilename newfilename
 
 # moving files 
-
+git mv oldpath/filename newpath/filename
 ```
+
+## Differences
+Showing the difference between files
+```
+git diff
+
+# escape diff scroll
+q
+```
+It is difficult to view when there are a lot of changes. In that case better to use VS Code's ***Source Control*** feature.
+
