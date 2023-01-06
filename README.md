@@ -45,6 +45,14 @@ git commit -m ‘Your comment’
 ```
 *A Git hash is unique identifier for a commit.*
 
+Reviewing Commit History
+```
+git log
+
+# viewing condensed version (without scroll)
+git log --online
+```
+
 Getting File State
 ```
 git status 
@@ -91,6 +99,9 @@ git mv oldpath/filename newpath/filename
 Showing the difference between files
 ```
 git diff
+
+# look at a specific hash's diff
+git diff hash
 
 # escape diff scroll
 q
