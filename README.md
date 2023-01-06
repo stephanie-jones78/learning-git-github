@@ -3,6 +3,8 @@
 >[LinkedIn Course](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-git-and-github-14213624%3Ftrk%3Dshare_ent_url%26shareId%3DdvujaFZBS%252BGLk%252FgY2blIrg%253D%253D)
 
 >[This podcast episode](https://podcasts.google.com/u/1/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81MTA5Mzc2NC9wb2RjYXN0L3Jzcw/episode/OWUwZDhlYmYtMmZkMC00YzcwLWI4NjMtMGI0MWE0ZjY4ZmVj?sa=X&ved=0CAUQkfYCahcKEwjojIW7zK_8AhUAAAAAHQAAAAAQLA) on CI/CD and CI/CT Pipelines inspired me wanting to reaquaint and dive deeper into git fundamentals.
+## Version Control
+Version control allows us to document the history of a project over time and gives us the ability to jump back and forth through time.
 
 ## Git Setup
 Configuring GIT
@@ -20,7 +22,7 @@ Initializing Project Folder
 git init
 ```
 
-Each Git branch is like an alternate reality
+Each Git branch is like an alternate reality that allows you to create alternate *versions* of a project. Essentially, it is a copy of a project that you can work on without changing the original. You can then syncronize branches or go back and forth between them.
 - Head is the actual reality
 - Main (Master)
 
