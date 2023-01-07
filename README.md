@@ -124,3 +124,4 @@ git commit amend --no-edit
 ```
 
 Testing ammend
+Testing ammend ___ > command
