@@ -110,7 +110,7 @@ It is difficult to view when there are a lot of changes. In that case better to 
 
 ## Changing History
 Going back in time to change history. helps with avoiding messy commit histories.
-
+### Amend
 Amending allows you to add things to last commit
 ```
 # will open text editor for you to add commit message
@@ -122,8 +122,12 @@ git commit -am 'New commit msg'
 # keeps same commit msg
 git commit amend --no-edit
 ```
-
+### Reset
 Resetting allows you to go back to a previous commit. Think of this like a ***rewind*** feature that undoes changesm sending them back to an unstaged environment from commited.
 ```
 git reset logHash
+```
+### Hard Reset
+```
+git reset --hard logHash
 ```
