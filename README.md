@@ -128,6 +128,21 @@ Resetting allows you to go back to a previous commit. Think of this like a ***re
 git reset logHash
 ```
 ### Hard Reset
+This resets commit history and also modifies files to the state of the commit being reset.
 ```
 git reset --hard logHash
+```
+### Rebasing
+Rebasing takes commit from one branch and applies them to another.
+```
+git rebase <branch>|<commit>
+
+# let's you use text editor to make changes
+git rebase --interactive <branch>|<commit>
+
+# useful for long commit histories when you only want to go back a few steps
+git rebase -i HEAD-#
+
+# lets you see all commits, better when you don't have too many commits
+git rebase -i --root
 ```
