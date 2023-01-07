@@ -109,9 +109,9 @@ q
 It is difficult to view when there are a lot of changes. In that case better to use VS Code's ***Source Control*** feature.
 
 ## Changing History
-Going back in time to change history
+Going back in time to change history. helps with avoiding messy commit histories.
 
-Amending is when you add things to last commit
+Amending allows you to add things to last commit
 ```
 # will open text editor for you to add commit message
 git commit --amend
@@ -123,5 +123,7 @@ git commit -am 'New commit msg'
 git commit amend --no-edit
 ```
 
-Testing ammend
-Testing ammend ___ > command
+Resetting allows you to go back to a previous commit. Think of this like a ***rewind*** feature that undoes changesm sending them back to an unstaged environment from commited.
+```
+git reset logHash
+```
