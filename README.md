@@ -113,9 +113,14 @@ Going back in time to change history
 
 Amending is when you add things to last commit
 ```
-git commit amend
+# will open text editor for you to add commit message
+git commit --amend
+
+# allows you to add commit msg in command
 git commit -am 'New commit msg'
+
+# keeps same commit msg
 git commit amend --no-edit
 ```
 
-Test text
+Testing ammend
