@@ -110,6 +110,11 @@ It is difficult to view when there are a lot of changes. In that case better to 
 
 ## Changing History
 Going back in time to change history. helps with avoiding messy commit histories.
+>This line of code avoids the diverging branch error when changing commit history by force pushing to GitHub
+```
+# force pushing to github
+git push -f origin main
+```
 ### Amend
 Amending allows you to add things to last commit
 ```
@@ -141,7 +146,7 @@ git rebase <branch>|<commit>
 git rebase --interactive <branch>|<commit>
 
 # useful for long commit histories when you only want to go back a few steps
-git rebase -i HEAD-#
+git rebase -i HEAD~#
 
 # lets you see all commits, better when you don't have too many commits
 git rebase -i --root
