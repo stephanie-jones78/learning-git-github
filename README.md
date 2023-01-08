@@ -151,30 +151,4 @@ git rebase -i HEAD~#
 # lets you see all commits, better when you don't have too many commits
 git rebase -i --root
 ```
-## Branches
-Branches let you create different versions of your file(s) so you can play around with different versions of your code.
-```
-# look at all of the branches in your repository
-git branch
-
-# copying a branch (will have same history as current branch)
-git switch -c branchName
-git checkout -b branchName # older version of switch command
-
-
-# switching back and forth between branches
-git checkout branchName
-
-# pushing to new branch
-git push origin branchName
-
-```
-### Merging
-The merge command merges the changes from one branch into the current branch.
-```
-# merge changes from current branch into specified branch
-    # specifiedBranch --> currentBranch
-git merge specifiedBranch 
-```
-
-This is the main version.
+This is merged version
