@@ -161,6 +161,13 @@ git branch -D branchName # forces git to ignore conflicts and deletes branch
 # remote delete
 git push origin --delete branchName
 ```
+### Git Dev Collab Flow
+1. Create feature/fix branch
+2. Make changes on that branch
+3. Merge branch to master
+4. Delete branch
+
+In team collaboration, no one messes with the main branch and each teammate has their own working branch. 
 
 ### View Graph Commit History
 <img
@@ -172,3 +179,5 @@ You can visualize your branches and respective commit histories by going to the 
 ### GitHub Protected Branches
 You can protect important branches by setting branch protection rules, which define whether collaborators can delete or force push to the branch and set requirements for any pushes to the branch, such as passing status checks or a linear commit history.
 >Read about branch protection rules [here](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches).
+## Merge Conflicts
+Merge conflicts happen when you are merging branches but you or somebody else has made changes to the same items in a file on the same branch. 
