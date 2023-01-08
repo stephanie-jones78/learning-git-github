@@ -151,3 +151,15 @@ git rebase -i HEAD~#
 # lets you see all commits, better when you don't have too many commits
 git rebase -i --root
 ```
+## Branches
+Branches let you create different versions of your code so you can play around with different versions of your code.
+```
+# look at all of the branches in your repository
+git branch
+
+# copying a branch (will have same history as current branch)
+git switch -c branchName
+
+# older version of switch command
+git checkout -b branchName
+```
