@@ -200,3 +200,5 @@ You can protect important branches by setting branch protection rules, which def
 >Read about branch protection rules [here](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches).
 ## Merge Conflicts
 Merge conflicts happen when you are merging branches but you or somebody else has made changes to the same items in a file on the same branch. 
+
+>Adding text. This is the newBranch readme file.
