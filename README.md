@@ -160,6 +160,9 @@ git branch
 # copying a branch (will have same history as current branch)
 git switch -c branchName
 
+# switching back and forth between branches
+git checkout branchName
+
 # older version of switch command
 git checkout -b branchName
 ```
