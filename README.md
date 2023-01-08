@@ -151,6 +151,13 @@ git rebase -i HEAD~#
 # lets you see all commits, better when you don't have too many commits
 git rebase -i --root
 ```
+### Deleting Branch
+```
+git branch --delete branchName
+git branch -d branchName # branches must be free of conflicts
+git branch -D branchName # forces git to ignore conflicts and deletes branch
+```
+
 ### View Graph Commit History
 <img
   src="commit-graph.png"
