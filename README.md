@@ -213,3 +213,20 @@ In VS Code there is a helper prompt that gives you different options for resolvi
   alt="Alt text"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 450px">
+
+## Stashing Code
+Stashing is a way of putting away code temporarily so that you can work on something else. Used when you want to restore file to a previous state to work on something else, but not lose the current modifications you have made.
+```
+# puts changes in temporary "storage facility"
+git stash
+
+# see what has been stored
+  # any new stashes go to the top of the list
+git stash list
+
+# retrieving the stash, applying stash changes
+git stash apply
+
+# retrieving the stash, removing stash from the list
+git stash pop
+```
