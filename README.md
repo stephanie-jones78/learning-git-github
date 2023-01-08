@@ -153,9 +153,13 @@ git rebase -i --root
 ```
 ### Deleting Branch
 ```
+# local delete
 git branch --delete branchName
 git branch -d branchName # branches must be free of conflicts
 git branch -D branchName # forces git to ignore conflicts and deletes branch
+
+# remote delete
+git push origin --delete branchName
 ```
 
 ### View Graph Commit History
