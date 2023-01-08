@@ -202,3 +202,4 @@ You can protect important branches by setting branch protection rules, which def
 Merge conflicts happen when you are merging branches but you or somebody else has made changes to the same items in a file on the same branch. 
 
 >This is a change on the main branch. It did not create a merge conflict?
+>Adding text. This is the newBranch readme file.
