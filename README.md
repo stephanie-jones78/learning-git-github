@@ -151,4 +151,13 @@ git rebase -i HEAD~#
 # lets you see all commits, better when you don't have too many commits
 git rebase -i --root
 ```
-This is merged version
+### View Graph Commit History
+<img
+  src="commit-graph.png"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 450px">
+You can visualize your branches and respective commit histories by going to the repo home page on Github > Clicking the top ***Insights*** tab > and then selecting the ***Network*** option on the left nav menu.
+### GitHub Protected Branches
+You can protect important branches by setting branch protection rules, which define whether collaborators can delete or force push to the branch and set requirements for any pushes to the branch, such as passing status checks or a linear commit history.
+>Read about branch protection rules [here](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches).
