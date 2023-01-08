@@ -200,6 +200,16 @@ You can protect important branches by setting branch protection rules, which def
 >Read about branch protection rules [here](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches).
 ## Merge Conflicts
 Merge conflicts happen when you are merging branches but you or somebody else has made changes to the same items in a file on the same branch. 
+```
+# while on main branch
+git merge newBranch
+```
+If there have been changes to main branch since last pull while you were working in the new branch, you will get a conflict error message when you try to merge the new branch with main.
 
->This is a change on the main branch. It did not create a merge conflict?
->Adding text. This is the newBranch readme file.
+In VS Code there is a helper prompt that gives you different options for resolving the error, within the editor window.
+
+<img
+  src="merge-conflict.png"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 450px">
