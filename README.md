@@ -152,4 +152,20 @@ git rebase -i HEAD~#
 git rebase -i --root
 ```
 
+## Branches
+Branches let you create different versions of your code so you can play around with different versions of your code.
+```
+# look at all of the branches in your repository
+git branch
+
+# copying a branch (will have same history as current branch)
+git switch -c branchName
+
+# switching back and forth between branches
+git checkout branchName
+
+# older version of switch command
+git checkout -b branchName
+```
+
 This is the new branch.
