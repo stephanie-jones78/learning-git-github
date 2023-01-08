@@ -152,4 +152,4 @@ git rebase -i HEAD~#
 git rebase -i --root
 ```
 
-New Branch test
+This is the new branch.
