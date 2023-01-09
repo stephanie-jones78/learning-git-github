@@ -230,3 +230,5 @@ git stash apply
 # retrieving the stash, removing stash from the list
 git stash pop
 ```
+
+Let's practice stashing . . .
