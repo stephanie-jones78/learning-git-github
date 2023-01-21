@@ -3,14 +3,14 @@
 I listened the Cloud Gurus' [podcast episode](https://podcasts.google.com/u/1/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81MTA5Mzc2NC9wb2RjYXN0L3Jzcw/episode/OWUwZDhlYmYtMmZkMC00YzcwLWI4NjMtMGI0MWE0ZjY4ZmVj?sa=X&ved=0CAUQkfYCahcKEwjojIW7zK_8AhUAAAAAHQAAAAAQLA) about CI/CD and CI/CT Pipelines and wanted to brush up on some Github concepts and commands. 
 
 <a href="https://podcasts.google.com/u/1/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81MTA5Mzc2NC9wb2RjYXN0L3Jzcw/episode/OWUwZDhlYmYtMmZkMC00YzcwLWI4NjMtMGI0MWE0ZjY4ZmVj?sa=X&ved=0CAUQkfYCahcKEwjojIW7zK_8AhUAAAAAHQAAAAAQLA">
-  <img src="snaps/avi_cloud-gurus.jpeg" style="display:block; margin-left:auto; margin-right:auto; max-width: 150">
+  <img src="imgs/avi_cloud-gurus.jpeg" style="display:block; margin-left:auto; margin-right:auto; max-width: 150">
 </a>
 
 [This LinkedIn course](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-git-and-github-14213624%3Ftrk%3Dshare_ent_url%26shareId%3DdvujaFZBS%252BGLk%252FgY2blIrg%253D%253D) had a good walkthrough of Github commands and best practices when collaborating with a team.
 
 ## Git Setup
 Version control allows us to document the history of a project over time and creating a "time machine" which gives us the ability to jump back and forth through time. Git and GitHub are tools that programmers can use to keep a historical record of those changes to source code files. 
-<img src="snaps/icon_github.png" style="display:block; margin-left:auto; margin-right:auto; max-width: 10 ">
+<img src="imgs/icon_github.png" style="display:block; margin-left:auto; margin-right:auto; max-width: 10 ">
 - Git is a software that tracks the changes *and*
 - Github is a website that can host files and information about their change history.
 
