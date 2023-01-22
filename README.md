@@ -10,47 +10,177 @@ I listened the Cloud Gurus' [podcast episode](https://podcasts.google.com/u/1/fe
 
 ## Git Setup
 Version control allows us to document the history of a project over time and creating a "time machine" which gives us the ability to jump back and forth through time. Git and GitHub are tools that programmers can use to keep a historical record of those changes to source code files. 
-<img src="imgs/icon_github.png" style="display:block; margin-left:auto; margin-right:auto; max-width: 10 ">
 - Git is a software that tracks the changes *and*
 - Github is a website that can host files and information about their change history.
 
 >Source: ChatGPT3
 ```
-# configure user name and email
-git config --global user.name #your github “Your Name”
-git config --global user.email #github email “Your Email”
+# see your existing git configuration
+git config -l
+
+# configure user name, email, and credentials
+git config --global user.name "Your Name"
+git config --global user.email “Your Email”
+git config --global credential.helper cache
 
 # initialize local git repository
 	# Creates an empty .git folder in local repository
 	# This is where git stores all the project information
 git init
-
-# connecting to remote git repository
 ```
+### Connecting to Remote Git Repository
+```
+# pulling remote repository in locally
+git clone [url] [localFolder *optional*]
 
+# pushing local repository into remote
+git remote add origin https://github.com/username/[repo_name].git
+```
 ## Git Environments
 ###	Staging
+```
+git add fileName
+git add -A
+git add -all
+git add .
+```
 ###	Committing
+This is what creates a tracked version of a file. *Each commit will have a unique hash identifier.*
+```
+git commit -m 'commit message'
+```
 ###	Tracking
-		Git Log
-		Git Status
+```
+# view commit history
+git log --oneline
+
+# view status of project files
+git status
+```
 ###	Ignoring
+Files that are not tracked by git or uploaded to GitHub. Create a .gitignore file at the root level of project folder with files or file patterns you want to ignore. *Git doesn't track empty folders.*
+```
+# create ignore file
+code .gitignore
+
+# sample contents
+.DS_Store
+.vscode/authentication.js
+node_modules
+notes/ 
+**/*-todo.md
+
+# system wide ignore pattern across all repositories
+git config --global core.excludesfile [file]
+```
+
 ###	Restoring Files to a Previous State
 
 ## Changing History
+Going back in time to change history helps with avoiding messy commit histories. 
+```
+# avoid the diverging branch error when changing commit history by force pushing to GitHub
+git push -f origin main
+```
 ###	Amend
+Amending allows you to add things to last commit,
+```
+# will open text editor for you to add commit message
+git commit --amend
+
+# allows you to add commit msg in command
+git commit -am 'New commit msg'
+
+# keeps same commit msg
+git commit amend --no-edit
+```
 ###	Reset
-		Soft Reset
-		Hard Reset
+Resetting allows you to go back to a previous commit, undo changes, and send those changes back to an unstaged environment.
+```
+# soft reset
+git reset logHash
+
+# hard reset
+git reset --hard logHash
+```
 
 ## Deleting, Renaming, and Moving Files
+```
+# deleting files managed by git
+    # also moves deletion event into staging
+    # takes care of git add 
+git rm filename
 
+# renaming files
+git mv oldfilename newfilename
+
+# moving files 
+git mv oldpath/filename newpath/filename
+```
 ## Git Branches
-###	Developer Collaboration Flow
-###	Creating a Branch
-###	Branch Rebasing
-###	Deleting Branch
+Branches let you create different versions of your file(s). This allows you to play around with different versions of your code. 
 
+Each Git branch is like an alternate reality that allows you to create alternate versions of a project. Essentially, it is a copy of a project that you can work on without changing the original. You can then syncronize branches or go back and forth between them.
+- Head is the actual reality
+- Main (Master)
+
+```
+# look at all of the branches in your repository
+git branch
+```
+###	Developer Collaboration Flow
+In team collaboration, no one messes with the main branch and each teammate has their own working branch.
+1. Create feature/fix branch
+2. Make changes on that branch
+3. Merge branch to master
+4. Delete branch
+
+<img src="commit-graph.png" style="display:block; margin-left:auto; margin-right:auto; max-width: 450">
+
+>### Graph of branch commit history
+>You can visualize your branches and respective commit histories by going to the repo home page on Github > Clicking the top Insights tab > and then selecting the Network option on the left nav menu.
+
+###	Creating a Branch
+```
+# copying a branch (will have same history as current branch)
+git switch -c branchName
+git checkout -b branchName # older version of switch command
+
+# switching back and forth between branches
+git checkout branchName
+
+# pushing to new branch
+git push origin branchName
+```
+
+### Protect Branched
+You can protect important branches by setting branch protection rules, which define whether collaborators can delete or force push to the branch and set requirements for any pushes to the branch, such as passing status checks or a linear commit history.
+>Read about branch protection rules [here](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches).
+
+###	Branch Rebasing
+Rebasing takes commit from one branch and applies them to another.
+```
+git rebase <branch>|<commit>
+
+# let's you use text editor to make changes
+git rebase --interactive <branch>|<commit>
+
+# useful for long commit histories when you only want to go back a few steps
+git rebase -i HEAD~#
+
+# lets you see all commits, better when you don't have too many commits
+git rebase -i --root
+```
+###	Deleting Branch
+```
+# local delete
+git branch --delete branchName
+git branch -d branchName # branches must be free of conflicts
+git branch -D branchName # forces git to ignore conflicts and deletes branch
+
+# remote delete
+git push origin --delete branchName
+```
 ## Git Differences
 ###	Showing the Diff
 ###	Merge Conflicts
@@ -207,6 +337,7 @@ git rebase -i --root
 ```
 ## Git Branches
 Branches let you create different versions of your file(s) so you can play around with different versions of your code.
+
 ```
 # look at all of the branches in your repository
 git branch
